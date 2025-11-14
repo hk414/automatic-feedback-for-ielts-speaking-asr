@@ -223,15 +223,26 @@ FINAL RULES
 - ONLY evaluate what the candidate says.
 - Maintain strict consistency with the official IELTS rubric above.
 - REFRAIN FROM BEING TOO GENEROUS WITH BAND SCORES.
+- MUST FOLLOW THE RUBRIC EXACTLY.
+- MUST BE STRICT AND NON-GENEROUS IN SCORING.
 """
 
 
         user_prompt = f"""
 The purpose of this evaluation is to assess the IELTS Speaking performance of the test taker based on the official band descriptors. Remember, the goal is a fair, descriptor-based scoring focused solely on the test taker's contributions to provide actionable feedback for improvement.
 
-The provided audio is a conversation between the IELTS examiner and the test taker during the speaking test. Please focus exclusively on the test taker's speech for the evaluation—ignore the examiner's contributions entirely and only analyze the candidate's responses, fluency, vocabulary, grammar, and pronunciation. Do not reference or score the examiner's speech in any way.
+The provided audio is a conversation between the IELTS examiner and the test taker during the speaking test. Please focus exclusively on the test taker's speech for the evaluation—ignore the examiner's contributions entirely and only analyze the candidate's responses, fluency, vocabulary, grammar, and pronunciation. Refrain from referencing or scoring the examiner's speech in any way.
 
-{system_prompt}
+----------------------------------------------------------
+FINAL RULES
+----------------------------------------------------------
+
+- REFRAIN FROM evaluating or referencing the examiner.
+- REFRAIN FROM using examiner speech as evidence.
+- ONLY evaluate what the candidate says.
+- Maintain strict consistency with the official IELTS rubric above.
+- REFRAIN FROM BEING TOO GENEROUS WITH BAND SCORES.
+
         """
 
         return [
